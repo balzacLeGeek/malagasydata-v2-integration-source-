@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Malagasydata v2</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="../dist/styles/main.css" />
+</head>
+
+<body class="login" id="login">
+  <div class="card" id="login-container">
+    <div v-if="loading" class="loader"></div>
+    <div v-else="loading">
+      <div class="card-header">
+        Connexion à votre compte
+      </div>
+      <div class="card-body">
+        <form id="form-login" @submit="validateForm">
+          <floating>
+            <label>Adresse email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+            />
+            <span class="validation-msg success">Success message</span>
+          </floating>
+
+          <floating>
+            <label>Votre mot de passe</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+            />
+            <span class="validation-msg error">Mot de passe obligatoire</span>
+          </floating>
+          <p class="btn-wrapper">
+            <input
+              class="btn btn-primary"
+              type="submit"
+              value="Connectez-vous"
+            />
+          </p>
+          <p class="mdp-link">
+            <a href=""
+              ><i class="dicon dicon-cadenas"></i> Mot de passe oublié ?</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../dist/scripts/main.js"></script>
+</body>
+
+</html>

@@ -4,6 +4,7 @@ import '~/styles/main.scss'
 
 const features = {
   home: ['home'],
+  login: ['login'],
 }
 
 const { id } = document.body

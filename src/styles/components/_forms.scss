@@ -1,0 +1,152 @@
+/** Form Control */
+
+.form-group {
+  padding: 0 20px;
+  position: relative;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  height: 50px;
+  margin-bottom: 16px;
+
+  label {
+    position: absolute;
+    font-size: 14px;
+    line-height: 1.8;
+    color: theme-color('label-color');
+    top: 13px;
+    z-index: 1;
+    transition: $transition;
+    transform-origin: top left;
+    white-space: nowrap;
+  }
+
+  input.form-control {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    margin-top: 13px;
+    border-radius: 0;
+    z-index: 2;
+    font-size: 14px;
+    transition: $transition;
+
+    &[readonly] {
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &.focused,
+  &.populated {
+    background-color: #f8f9fa;
+    border: 1px solid #6da4de;
+
+    label {
+      // color: theme-color();
+      transform: scale(0.6428);
+      font-weight: $font-medium;
+      top: 8px;
+    }
+
+    input.form-control {
+      color: theme-color();
+      margin-top: 22px;
+    }
+    input:-internal-autofill-selected {
+      color: theme-color() !important;
+      background-color: transparent !important;
+    }
+
+    .validation-msg:not(.show) {
+      display: none;
+    }
+
+    .validation-msg.show {
+      margin-top: 5px;
+    }
+  }
+
+  &.has-message {
+    margin-bottom: 25px;
+  }
+
+  &.success {
+    border: 1px solid theme-color('success');
+  }
+
+  &.error {
+    border: 1px solid theme-color('error');
+  }
+
+  .validation-msg {
+    &.error {
+      color: theme-color('error');
+    }
+
+    font-size: 11px;
+    display: flex;
+    margin-top: 15px;
+    transition: all linear 0.3s;
+  }
+}
+
+.form-flat {
+  padding: 0;
+  border: none;
+  color: theme-color('primary');
+}
+
+.c-input-number {
+  width: 100%;
+  display: flex;
+
+  .cin_input-wrapper {
+    height: 35px;
+    border-radius: 10px;
+    background-color: theme-color();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    .input-number {
+      border: none;
+      font-size: 18px;
+      font-weight: $font-medium;
+      text-align: center;
+      color: #ffffff;
+      background-color: transparent;
+      min-width: 0;
+      width: auto;
+      @include flex-width(32px);
+    }
+
+    .cin_sub,
+    .cin_sup {
+      font-size: 12px;
+      font-weight: $font-medium;
+      text-align: center;
+      color: #ffffff;
+      opacity: 0.5;
+      flex: 0 0 22px;
+      min-width: 22px;
+    }
+  }
+
+  .cin_minus,
+  .cin_plus {
+    line-height: 35px;
+    font-size: 12px;
+    flex: 0 0 20px;
+  }
+
+  .cin_plus {
+    text-align: right;
+  }
+}

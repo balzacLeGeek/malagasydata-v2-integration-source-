@@ -1,0 +1,71 @@
+.login {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f8f9fa url("/build/public/images/mg-login-bg.jpg") 0 0 no-repeat;
+  background-size: contain;
+
+  &.forgot-pwd {
+    background: theme-color("menu")
+      url("/build/public/images/mg-login-bg.jpg") 0 0 no-repeat;
+  }
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    img {
+      width: 36px;
+      height: auto;
+    }
+  }
+
+  .form-group {
+    &.focused,
+    &.populated {
+      label {
+        color: theme-color();
+      }
+    }
+  }
+
+  .card {
+    width: 360px;
+
+    .card-header {
+      font-size: 22px;
+      padding: 30px 30px 0;
+      text-align: center;
+      line-height: 1.36;
+    }
+
+    .card-body {
+      padding: 20px 30px;
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 40px;
+  }
+
+  .btn {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .mdp-link {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+
+    i {
+      font-size: 18px;
+      vertical-align: -2px;
+      margin-right: 2px;
+    }
+  }
+}

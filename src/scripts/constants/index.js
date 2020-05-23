@@ -1,6 +1,6 @@
 export const MESSAGE = {
   common: {
-    serverError: "Veuillez contacter l'administrateur",
+    serverError: "Erreur serveur. Veuillez contacter l'administrateur",
     networkError: 'Verifier que vous êtes connectés',
     failedFetchError:
       "Une erreur s'est produite lors de la récupération des données",

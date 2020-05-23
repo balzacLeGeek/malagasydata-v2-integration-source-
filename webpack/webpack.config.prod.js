@@ -5,6 +5,14 @@ const common = require("./webpack.common.js");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const publicPath = process.env.PUBLIC_PATH || "";
+const envName = process.env.NODE_ENV
+const envBaseUrl = process.env.BASE_URL
+const envApiPrefix = process.env.API_PREFIX
+
+console.log('--------------')
+console.log(`BASE_URL: ${ envBaseUrl }`)
+console.log(`API_PREFIX: ${ envApiPrefix }`)
+console.log('--------------')
 
 module.exports = merge(common, {
   mode: "production",
@@ -24,7 +32,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new Webpack.NormalModuleReplacementPlugin(/ws\.js/, "ws.production.js"),
+    new Webpack.NormalModuleReplacementPlugin(/ws\.js/, `ws.${ envName }.js`),
     new Webpack.optimize.ModuleConcatenationPlugin(),
     new MiniCssExtractPlugin({
       filename: "build/css/bundle.css"

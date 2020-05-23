@@ -8,6 +8,10 @@ export default {
           type: Boolean,
           default: false,
         },
+        success: {
+          type: Boolean,
+          default: false,
+        },
       },
 
       data: function () {
@@ -16,7 +20,28 @@ export default {
           labelEl: undefined,
           isEmpty: true,
           isActive: false,
+          errorClass: this.error,
+          successClass: this.success,
         }
+      },
+
+      watch: {
+        error: {
+          immediate: true,
+          handler(error) {
+            if (typeof error !== 'undefined') {
+              this.errorClass = error
+            }
+          },
+        },
+        success: {
+          immediate: true,
+          handler(success) {
+            if (typeof success !== 'undefined') {
+              this.successClass = success
+            }
+          },
+        },
       },
 
       computed: {
@@ -25,6 +50,8 @@ export default {
             populated: !this.isEmpty,
             focused: this.isActive,
             error: this.error,
+            success: this.success,
+            'has-message': this.errorClass === true || this.successClass === true
           }
         },
       },

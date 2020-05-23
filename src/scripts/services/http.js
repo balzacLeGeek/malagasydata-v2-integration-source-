@@ -40,7 +40,7 @@ class Http {
         return response
       },
       function (error) {
-        return Promise.reject(error)
+        return Promise.reject(error.response)
       }
     )
 
@@ -48,8 +48,11 @@ class Http {
   }
 
   get = async (params) => {
+    const { apiPrefix } = params
+    const url = typeof apiPrefix === 'undefined' ? `${process.env.API_PREFIX}${params.url}` : params.url
+
     return await this.axios(params.loader)
-      .get(params.url, { params: params.data })
+      .get(url, { params: params.data })
       .then((response) => {
         return response
       })
@@ -60,34 +63,46 @@ class Http {
   }
 
   post = async (params) => {
+    const { apiPrefix } = params
+    const url = typeof apiPrefix === 'undefined' ? `${process.env.API_PREFIX}${params.url}` : params.url
+
     return await this.axios(params.loader)
-      .post(params.url, params.data)
+      .post(url, params.data)
       .then((response) => {
         return response
       })
       .catch((e) => {
+        Pace.done()
         return e
       })
   }
 
   put = async (params) => {
+    const { apiPrefix } = params
+    const url = typeof apiPrefix === 'undefined' ? `${process.env.API_PREFIX}${params.url}` : params.url
+
     return await this.axios(params.loader)
-      .put(params.url, params.data)
+      .put(url, params.data)
       .then((response) => {
         return response
       })
       .catch((e) => {
+        Pace.done()
         return e
       })
   }
 
   delete = async (params) => {
+    const { apiPrefix } = params
+    const url = typeof apiPrefix === 'undefined' ? `${process.env.API_PREFIX}${params.url}` : params.url
+
     return await this.axios(params.loader)
-      .delete(params.url, params.data)
+      .delete(url, params.data)
       .then((response) => {
         return response
       })
       .catch((e) => {
+        Pace.done()
         return e
       })
   }

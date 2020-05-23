@@ -1,0 +1,53 @@
+.component-fade-item {
+  transition: all 0.3s ease;
+}
+.component-fade-enter
+/* .component-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.component-fade-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.component-fade-leave-active {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.card-animation-item {
+  transition: all 0.3s ease;
+}
+.card-animation-leave-to {
+  opacity: 0;
+  max-height: 0 !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.fade-animation-enter-active {
+  transition: all 0.3s ease;
+}
+.fade-animation-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-animation-enter, .fade-animation-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

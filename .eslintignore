@@ -1,0 +1,17 @@
+node_modules
+build
+package.json
+package-*
+yarn-*
+yarn.lock
+.prettierignore
+.eslintignore
+webpack
+.eslintrc
+src/*.html
+*.scss
+.env*
+jsconfig.json
+.browserslistrc
+public/fonts/*
+public/images/*

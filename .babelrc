@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@vue/babel-preset-jsx",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.0.0"
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "transform-vue-jsx",
+    [
+      "import",
+      {
+        "libraryName": "ant-design-vue",
+        "style": "css"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,77 @@
+/** Import Bootstrap functions */
+// @import "~bootstrap/scss/functions";
+// ** FONTS **
+
+$font-thin: 100;
+$font-x-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-sm-bold: 600;
+$font-bold: 700;
+$font-x-bold: 800;
+$font-black: 900;
+
+$rubik: 'Rubik', Verdana, sans-serif;
+
+$theme-colors: (
+  'default': #757491,
+  'primary': #4b45b2,
+  'secondary': #ff7f89,
+  'menu': #4c49af,
+  'label-color': #999,
+  'success': #3dd598,
+  'error': #fc5a5a,
+);
+
+// ** OLD COLORS **
+$grey-50: #f4f5fa;
+$blue-grey-5: #55606e;
+$steel: #6f7799;
+$blue-grey-7: #788da1;
+$blue-grey-8: #8995c7;
+$dark-indigo-a: #0a2239;
+$dark-indigo-f: #0f2a47;
+$aqua: #0fddb5;
+$azure: theme-color('primary');
+$strawberry: #e9333d;
+
+// $assetspath: '../../resources/assets';
+
+// ** ANIMATIONS SPEEDS **
+$slow: 1000ms;
+$normal: 500ms;
+$fast: 300ms;
+
+$transition: all $normal ease;
+
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+$btn-shadow: 0 6px 8px 0 rgba(49, 133, 255, 0.1);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$font-family-sans-serif: $rubik;
+$body-color: theme-color('default');
+
+$form-grid-gutter-width: 16px;
+$grid-gutter-width: 20px;
+$spacer: 10px;
+
+@mixin focus {
+  &:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin flex-width($width) {
+  flex: 0 0 $width;
+  max-width: $width;
+}

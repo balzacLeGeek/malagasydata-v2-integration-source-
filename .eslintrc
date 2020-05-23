@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": ["plugin:vue/vue3-recommended", "prettier/vue"],
+  "rules": {
+    "semi": 0,
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "vue/no-v-html": 0
+  },
+  "overrides": [
+    {
+      "files": ["src/scripts/*"]
+    }
+  ]
+}

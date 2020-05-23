@@ -1,0 +1,93 @@
+@import './common/variables';
+
+/* --- BEGIN THEMING ---- */
+.body-bg,
+.aside-hidden {
+  background-color: $grey-50;
+}
+
+.primary-color {
+  color: $azure !important;
+}
+
+.primary-bg-color {
+  background-color: $azure;
+}
+
+.primary-border-color {
+  border-color: $azure;
+}
+
+.primary-border-color-25 {
+  border-color: rgba(49, 133, 255, 0.2) !important;
+}
+
+.secondary-color {
+  color: $aqua !important;
+}
+
+.secondary-bg-color {
+  background-color: $aqua !important;
+}
+
+.secondary-border-color {
+  border-color: $aqua !important;
+}
+
+.secondary-border-color-25 {
+  border-color: rgba(15, 221, 181, 0.25) !important;
+}
+
+.text-color {
+  color: $blue-grey-8;
+}
+
+.border-default-color {
+  border-color: $blue-grey-8 !important;
+}
+
+.sidebar-bg {
+  background-color: #fff;
+}
+
+.menu-hover-bg {
+  background-color: theme-color('menu');
+}
+
+.card-title-1 {
+  color: $dark-indigo-f;
+}
+
+.card-title-2 {
+  color: $blue-grey-5;
+}
+
+.status-group {
+  color: $blue-grey-7 !important;
+}
+
+.status-group-bg {
+  background-color: $blue-grey-7;
+}
+
+.label-color {
+  color: $steel !important;
+}
+
+.danger {
+  color: $strawberry !important;
+}
+
+.danger-bg {
+  background-color: $strawberry !important;
+}
+
+.danger-border-color {
+  border-color: $strawberry !important;
+}
+
+.success {
+  color: $aqua !important;
+}
+
+/* --- END THEMING ---- */

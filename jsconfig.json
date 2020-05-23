@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@autoload/*": ["./scripts/autoload/*"],
+      "@blocks/*": ["./scripts/blocks/*"],
+      "@components/*": ["./scripts/components/*"],
+      "@constants/*": ["./scripts/constants/*"],
+      "@controllers/*": ["./scripts/controllers/*"],
+      "@filters/*": ["./scripts/filters/*"],
+      "@lib/*": ["./scripts/lib/*"],
+      "@routes/*": ["./scripts/routes/*"],
+      "@services/*": ["./scripts/services/*"],
+      "@stores/*": ["./scripts/stores/*"],
+      "@util/*": ["./scripts/util/*"],
+      "@ws/*": ["./scripts/ws/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

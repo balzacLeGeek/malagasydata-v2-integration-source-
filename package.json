@@ -96,6 +96,7 @@
     "pace-progressbar": "^1.0.9",
     "popper.js": "^1.16.1",
     "stylelint": "^13.2.1",
+    "typicons.font": "^2.0.9",
     "vue": "^2.6.11",
     "vue-advanced-cropper": "^0.16.0",
     "vue-croppie": "^2.0.1",

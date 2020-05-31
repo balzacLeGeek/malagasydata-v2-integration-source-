@@ -1,8 +1,10 @@
+import menu from '@components/menu'
+
 export default {
   init() {
     console.log('> common init ----')
 
-    // pagination.init()
+    menu.init()
     // JavaScript to be fired on all pages
   },
   finalize() {

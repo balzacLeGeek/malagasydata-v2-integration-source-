@@ -10,6 +10,50 @@
   </head>
 
   <body id="home">
+    <aside id="sidebar" class="sidebar" :class="{'closed': closed}">
+      <a class="logo" href="#">
+        <img alt="Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/langfr-220px-Bootstrap_logo.svg.png">
+      </a>
+      <div id="collapse-btn" class="custom-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav nav-sidebar">
+        <li>
+          <a class="active" href="#">
+            <i class="typcn typcn-home-outline"></i> 
+            <span>Fandraisana</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="typcn typcn-group-outline"></i> 
+            <span>Mponina</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="typcn typcn-archive"></i> 
+            <span>Fangatahana</span>
+            <div class="new-mark has-new">+10</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="typcn typcn-mail"></i> 
+            <span>Hafatra</span>
+            <div class="new-mark has-new">2</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="typcn typcn-cog-outline"></i> 
+            <span>Kirakira</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
     <div id="home-wrapper">
       <home />
     </div>

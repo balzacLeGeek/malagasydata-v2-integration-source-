@@ -84,7 +84,7 @@
     "@vue/babel-preset-jsx": "^1.1.2",
     "animated-number-vue": "^1.0.0",
     "ant-design-vue": "^1.4.12",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "croppie": "^2.6.4",
